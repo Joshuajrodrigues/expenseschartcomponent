@@ -1,9 +1,66 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,700;1,400&display=swap");
+:root {
+  --font-fam: "DM Sans", sans-serif;
+  /* primary */
+  --soft-red: hsl(10, 79%, 65%);
+  --cyan: hsl(186, 34%, 60%);
+  /* Neutral */
+  --Dark-brown: hsl(25, 47%, 15%);
+  --Medium-brown: hsl(28, 10%, 53%);
+  --Cream: hsl(27, 66%, 92%);
+  --Very-pale-orange: hsl(33, 100%, 98%);
+}
 
 body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "DM Sans", sans-serif;
+  font-family: var(--font-fam);
   font-size: 18px;
+  background-color: var(--Cream);
+}
+.header-container {
+  background-color: var(--soft-red);
+  margin: 1rem;
+  padding: 1rem;
+  border-radius: 12px;
+  color: var(--Very-pale-orange);
+  display: flex;
+  justify-content: space-between;
+}
+.header-container img {
+  height: 2rem;
+  align-self: center;
+}
+.balance {
+  display: flex;
+  flex-direction: column;
+}
+.balance span:first-child {
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: var(--Cream);
+}
+.balance span:last-child {
+  font-weight: 700;
+}
+.details-container {
+  background-color: var(--Very-pale-orange);
+  height: 40vh;
+  margin: 1rem;
+  padding: 1rem;
+  border-radius: 12px;
+}
+.details-title {
+  color: var(--Dark-brown);
+}
+.graph-container {
+  display: flex;
+}
+.graph-bar {
+  margin: auto 0.15rem;
+  background-color: var(--soft-red);
+}
+.graph-day {
+  margin: auto 0.15rem;
 }
