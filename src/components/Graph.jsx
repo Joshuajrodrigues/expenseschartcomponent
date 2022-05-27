@@ -4,7 +4,7 @@ const Graph = () => {
   return (
     <div className="graph-container">
       {data?.map((item) => (
-        <div>
+        <div className="graph">
           <div
             className="graph-bar"
             style={{ height: `${item.amount * 2}px` }}

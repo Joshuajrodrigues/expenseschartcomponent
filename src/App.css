@@ -56,11 +56,22 @@ body {
 }
 .graph-container {
   display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+.graph {
+  display: flex;
+  flex-direction: column;
+  align-self: flex-end;
 }
 .graph-bar {
   margin: auto 0.15rem;
+  width: 2rem;
+  border-radius: 3px 3px 0 0;
   background-color: var(--soft-red);
 }
 .graph-day {
   margin: auto 0.15rem;
+  font-size: 0.8rem;
+  align-self: center;
 }
