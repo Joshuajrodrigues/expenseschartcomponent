@@ -15,7 +15,7 @@ Users should be able to:
 
 
 ### Links
-https://joshuajrodrigues.github.io/expenseschartcomponent/
+[https://joshuajrodrigues.github.io/expenseschartcomponent/](https://fascinating-brioche-ad9e36.netlify.app/)
 
 ## My process
 
