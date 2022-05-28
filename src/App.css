@@ -9,6 +9,9 @@
   --Medium-brown: hsl(28, 10%, 53%);
   --Cream: hsl(27, 66%, 92%);
   --Very-pale-orange: hsl(33, 100%, 98%);
+  /* hover */
+  --soft-red-hover: hsla(10, 79%, 65%, 0.705);
+  --cyan-hover: hsl(186, 34%, 60%, 0.705);
 }
 
 body {
@@ -19,10 +22,15 @@ body {
   font-size: 18px;
   background-color: var(--Cream);
 }
+.main-container {
+  margin: 4rem auto;
+}
 .header-container {
   background-color: var(--soft-red);
-  margin: 1rem;
+  margin: auto 35rem;
+  margin-bottom: 1rem;
   padding: 1rem;
+  height: 3.5rem;
   border-radius: 12px;
   color: var(--Very-pale-orange);
   display: flex;
@@ -30,6 +38,9 @@ body {
 }
 .header-container img {
   height: 2rem;
+  align-self: center;
+}
+.header-container .balance {
   align-self: center;
 }
 .balance {
@@ -43,35 +54,122 @@ body {
 }
 .balance span:last-child {
   font-weight: 700;
+  font-size: 1.5rem;
 }
 .details-container {
   background-color: var(--Very-pale-orange);
-  height: 40vh;
-  margin: 1rem;
+  position: relative;
+  height: 400px;
+  margin: auto 35rem;
   padding: 1rem;
   border-radius: 12px;
 }
 .details-title {
   color: var(--Dark-brown);
+  font-size: 1.5rem;
 }
 .graph-container {
   display: flex;
   justify-content: center;
   margin-top: 2rem;
+  padding-top: 2rem;
 }
 .graph {
   display: flex;
   flex-direction: column;
   align-self: flex-end;
+  cursor: pointer;
 }
-.graph-bar {
+.today-bar {
   margin: auto 0.15rem;
   width: 2rem;
   border-radius: 3px 3px 0 0;
+  background-color: var(--cyan);
+}
+.graph-bar {
+  margin: auto 0.35rem;
+  width: 2rem;
+  border-radius: 3px 3px 0 0;
   background-color: var(--soft-red);
+}
+.graph-bar:hover {
+  background-color: var(--soft-red-hover);
+}
+.today-bar:hover {
+  background-color: var(--cyan-hover);
+}
+
+.graph-amount {
+  visibility: hidden;
+}
+.graph:hover .graph-amount {
+  cursor: pointer;
+  visibility: visible;
+  width: 2rem;
+}
+.graph-amount {
+  background-color: var(--Dark-brown);
+  color: var(--Cream);
+  line-height: 1rem;
+  border-radius: 4px;
+  align-self: center;
+  text-align: center;
+  font-size: 0.56rem;
+  height: 1.2rem;
+  padding: 0.03rem;
+  width: 2rem;
+  margin-bottom: 0.3rem;
 }
 .graph-day {
   margin: auto 0.15rem;
   font-size: 0.8rem;
   align-self: center;
+  color: var(--Medium-brown);
+}
+.divider {
+  background-color: var(--Cream);
+  border: 1px solid transparent;
+}
+.grid-container {
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  padding: 1rem;
+  text-align: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  bottom: 0.5rem;
+}
+.grid-title {
+  display: flex;
+  grid-column: 1/2;
+  grid-row: 1/2;
+  flex-wrap: nowrap;
+  font-size: 1rem;
+  color: var(--Medium-brown);
+}
+.grid-amount {
+  grid-column: 1/2;
+  text-align: left;
+  grid-row: 2/3;
+  align-self: center;
+  font-size: 2rem;
+  color: var(--Dark-brown);
+}
+.sub-amount-container {
+  grid-column: 2/3;
+  grid-row: 2/3;
+  color: var(--Dark-brown);
+  display: flex;
+  flex-direction: column;
+}
+.sub-amount-container span:first-child {
+  text-align: right;
+}
+.sub-amount-container span:last-child {
+  color: var(--Medium-brown);
+  text-align: right;
+  font-size: 1rem;
 }
